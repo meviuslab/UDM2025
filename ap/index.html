@@ -59,97 +59,62 @@
 
     <h2>To Be Announced.</h2>    
 
-<!--     <table>
+    <table>
         <tr>
             <td>
-                <h2 style="font-size: 20px">Knowledge from Uncertainty in Evidential Deep Learning</h2> 
-                <strong>Cai Davies, Marc Roig Vilamala, Alun Preece, Federico Cerutti, Lance Kaplan, Supriyo Chakraborty </strong> <a class="btn btn-red" href="cameraready/2.pdf">PDF</a>
+                <h2 style="font-size: 20px">Multi-Modal Out-of-Distribution Detection with Large Language Models</h2> 
+                <strong>Zhixia He, Chen Zhao, Minglai Shao, Dong Li, Qin Tian </strong>
                 <br>
-                <u>Abstract</u>: This work reveals an {\em evidential signal} that emerges from the uncertainty value in Evidential Deep Learning (EDL). EDL is one example of a class of uncertainty-aware deep learning approaches designed to provide confidence (or epistemic uncertainty) about the current test sample. In particular for computer vision and bidirectional encoder large language models, the `evidential signal' arising from the Dirichlet strength in EDL can, in some cases, discriminate between classes, which is particularly strong when using large language models. We hypothesise that the KL regularisation term causes EDL to couple aleatoric and epistemic uncertainty. In this paper, we empirically investigate the correlations between misclassification and evaluated uncertainty, and show that EDL's `evidential signal' is due to misclassification bias. We critically evaluate EDL with other Dirichlet-based approaches, namely Generative Evidential Neural Networks (EDL-GEN) and Prior Networks, and show theoretically and empirically the differences between these loss functions. We conclude that EDL's coupling of uncertainty arises from these differences due to the use (or lack) of out-of-distribution samples during training.
+                <u>Abstract</u>: Vision-language models (VLMs) enhance image-based OOD detection by leveraging textual information to complement visual features, overcoming the limitations of traditional methods. 
+                While existing prompts in VLMs include uniform and learnable types, uniform prompts lack category-specific detail, and learnable negatives often capture only coarse non-ID features.
+                To address this, we propose NPSOODD, a graph-based framework supervised by positive and negative prompts.
+                We first use large language models (LLMs) to generate fine-grained, category-specific positive and negative prompts. 
+                These are optimized to capture intra-class semantics (positives) and inter-class boundaries (negatives). 
+                A Graph Neural Network (GNN) then fuses this semantic information into image features, enhancing an energy-based OOD detector. 
+                Experiments on CIFAR-100 and four OOD benchmarks with five LLMs show that NPSOODD outperforms state-of-the-art methods.
             </td>
         </tr>
 
         <tr>
             <td>
-                <h2 style="font-size: 20px">Uncertainty-aware Grounded Action Transformation towards Sim-to-Real Transfer for Traffic Signal Control</h2>
-                <strong>Longchao Da, Hao Mei, Romir Sharma, Hua Wei </strong> <a class="btn btn-red" href="cameraready/4.pdf">PDF</a>
+                <h2 style="font-size: 20px">Adaptive Robust Optimization with Data-Driven Uncertainty for Enhancing Distribution System Resilience</h2> 
+                <strong>Shuyi Chen, Shixiang Zhu, Ramteen Sioshansi </strong>
                 <br>
-                <u>Abstract</u>: Traffic signal control (TSC) is a complex and important task that affects the daily lives of millions of people. Reinforcement Learning (RL) has shown promising results in optimizing traffic signal control, but current RL-based TSC methods are mainly trained in simulation and suffer from the performance gap between simulation and the real world. In this paper, we propose a simulation-to-real-world (sim-to-real) transfer approach called UGAT, which transfers a learned policy trained from a simulated environment to a real-world environment by dynamically transforming actions in the simulation with uncertainty to mitigate the domain gap of transition dynamics. We evaluate our method on a simulated traffic environment and show that it significantly improves the performance of the transferred RL policy in the real world.
+                <u>Abstract</u>: Extreme weather increasingly threatens power systems, revealing the limits of reactive responses and underscoring the need for proactive resilience planning.
+                Existing methods often oversimplify uncertainty and decouple proactive and reactive decisions. 
+                We propose a tri-level optimization framework that integrates infrastructure investment, adversarial spatio-temporal disruptions, and adaptive response. 
+                Using conformal prediction, we construct distribution-free uncertainty sets that capture complex, data-scarce outage patterns. 
+                To solve the nested problem, we derive a bi-level reformulation via strong duality and develop a scalable Benders decomposition algorithm.
+                Experiments on real and synthetic data show our approach outperforms robust and two-stage baselines, achieving lower worst-case losses and more efficient resource use, particularly under tight constraints and large-scale uncertainty.
             </td>
         </tr>
 
         <tr>
             <td>
-                <h2 style="font-size: 20px">Building One-class Detector for Anything: Open-vocabulary Zero-shot OOD Detection Using Text-image Models</h2>
-                <strong>Yunhao Ge, Jie Ren, Jiaping Zhao, Kaifeng Chen, Andrew Gallagher, Laurent Itti, Balaji Lakshminarayanan</strong> <a class="btn btn-red" href="cameraready/5.pdf">PDF</a>
+                <h2 style="font-size: 20px">Quantifying Semantic Uncertainty in Large Language Models via Chain-of-Thought Reasoning</h2> 
+                <strong>Tianhao Wang, Ali Riahi Samani, Rathang Rajpal, Naren Ramakrishnan, Feng Chen </strong>
                 <br>
-                <u>Abstract</u>: We focus on the challenge of out-of-distribution (OOD) detection in deep learning models, a crucial aspect in ensuring reliability. Despite considerable effort, the problem remains significantly challenging in deep learning models due to their propensity to output over-confident predictions for OOD inputs. We propose a novel one-class open-set OOD detector that leverages text-image pre-trained models in a zero-shot fashion and incorporates various descriptions of in-domain and OOD. Our approach is designed to detect anything not in-domain and offers the flexibility to detect a wide variety of OOD, defined via fine- or coarse-grained labels, or even in natural language. We evaluate our approach on challenging benchmarks including large-scale datasets containing fine-grained, semantically similar classes, distributionally shifted images, and multi-object images containing a mixture of in-domain and OOD objects. Our method shows superior performance over previous methods on all benchmarks.
+                <u>Abstract</u>: Large Language Models (LLMs) have demonstrated impressive capabilities in generating fluent text and performing complex reasoning tasks.
+                However, understanding when and why their outputs may be unreliable remains a critical challenge. 
+                In this work, we propose a novel approach to quantifying semantic uncertainty in LLM outputs by leveraging Chain-of-Thought (CoT) reasoning. 
+                Rather than relying on token-level confidence scores and/or multiple samples, our approach fine-tunes a lightweight LLM to predict binarized semantic entropy from exclusively the CoT reasoning trail and the initial prompt.
+                This enables efficient, interpretable uncertainty estimation without requiring access to model internals or generating ensembles.
+                We evaluate our method across three QA datasets—TriviaQA, SQuAD, and BioASQ—using multiple LLM backbones, and benchmark its performance against existing uncertainty estimation techniques. 
+                Additionally, we conduct extensive ablation studies to understand precisely why CoT reasoning effectively captures uncertainty.
+                Our experiments demonstrate that CoT-based uncertainty estimation not only correlates well with output reliability but also enables downstream applications such as detecting model inconsistencies, understanding reasoning failures, and improving system-level decision-making strategies. 
+                By focusing on semantic uncertainty, our method contributes a practical and generalizable approach for making LLM outputs more transparent, trustworthy, and actionable.
             </td>
         </tr>
 
         <tr>
             <td>
-                <h2 style="font-size: 20px">Uncertainty Quantification of Deep Learning for Spatiotemporal Data: Challenges and Opportunities</h2>
-                <strong>Wenchong He, Zhe Jiang</strong> <a class="btn btn-red" href="cameraready/6.pdf">PDF</a>
+                <h2 style="font-size: 20px">Drift-Aware Proxy Uncertainty Estimation for Large Language Models in Temporal Streams</h2> 
+                <strong>Haoliang Wang, Dong Li, Chen Zhao</strong>
                 <br>
-                <u>Abstract</u>: With the advancement of GPS, remote sensing, and computational simulations, large amounts of geospatial and spatiotemporal data are being collected at an increasing speed. Such emerging spatiotemporal big data assets, together with the recent progress of deep learning technologies, provide unique opportunities to transform society. However, it is widely recognized that deep learning sometimes makes unexpected and incorrect predictions with unwarranted confidence, causing severe consequences in high-stake decision-making applications (e.g., disaster management, medical diagnosis, autonomous driving). Uncertainty quantification (UQ) aims to estimate a deep learning model's confidence. This paper provides a brief overview of UQ of deep learning for spatiotemporal data, including its unique challenges and existing methods. We particularly focus on the importance of uncertainty sources. We also identify several future research directions related to spatiotemporal data.
-            </td>
+                <u>Abstract</u>: Large Language Models (LLMs) are increasingly deployed in real-world settings where data distributions evolve over time, ranging from dynamic knowledge domains such as finance and politics to rapidly shifting linguistic trends on social media. However, most existing Uncertainty Quantification (UQ) methods evaluate LLMs under static conditions, assuming a fixed distribution of prompts and outputs, and thus fail to account for temporal drift. This work introduces a novel framework for Drift-Aware Proxy Uncertainty (DAPU) estimation that captures temporal uncertainty signals using lightweight, label-free mechanisms. The proposed approach integrates semantic drift detection by measuring time-weighted embedding divergence from recent prompt history, leverages model output entropy to quantify response uncertainty, and incorporates a timestamp-based decay function to reflect the influence of input recency. These components are combined into a unified, time-sensitive uncertainty score that adapts to evolving semantics and contextual shifts in the input distribution. Experiments on temporally-split datasets for summarization and question answering demonstrate that DAPU more effectively identifies high-risk generations during periods of concept drift compared to conventional entropy and Monte Carlo dropout baselines. The proposed framework is model-agnostic, scalable, and readily deployable in real-world LLM applications without requiring access to ground-truth labels or internal model modifications.
         </tr>
-
-        <tr>
-            <td>
-                <h2 style="font-size: 20px">Delphic Offline Reinforcement Learning under Nonidentifiable Hidden Confounding</h2>
-                <strong>Alizée Pace, Hugo Yèche, Bernhard Schölkopf, Gunnar Ratsch, Tennenholtz Guy</strong> <a class="btn btn-red" href="cameraready/7.pdf">PDF</a>
-                <br>
-                <u>Abstract</u>: A prominent challenge of offline reinforcement learning (RL) is the issue of hidden confounding: unobserved variables may influence both the actions taken by the agent and the observed outcomes. Hidden confounding can compromise the validity of any causal conclusion drawn from data and presents a major obstacle to effective offline RL. In the present paper, we tackle the problem of hidden confounding in the nonidentifiable setting. We propose a definition of uncertainty due to hidden confounding bias, termed delphic uncertainty, which uses variation over world models compatible with the observations, and differentiate it from the well-known epistemic and aleatoric uncertainties. We derive a practical method for estimating the three types of uncertainties, and construct a pessimistic offline RL algorithm to account for them. Our method does not assume identifiability of the unobserved confounders, and attempts to reduce the amount of confounding bias. We demonstrate through extensive experiments and ablations the efficacy of our approach on a sepsis management benchmark, as well as on electronic health records. Our results suggest that nonidentifiable hidden confounding bias can be mitigated to improve offline RL solutions in practice.
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <h2 style="font-size: 20px">Evaluating Uncertainty Quantification for Bird’s Eye View Semantic Segmentation</h2>
-                <strong>Bowen Yang, Linlin Yu, Tianhao Wang, Changbin Li, Feng Chen</strong> <a class="btn btn-red" href="cameraready/9.pdf">PDF</a>
-                <br>
-                <u>Abstract</u>: The fusion of raw features from multiple sensors (such as stereo cameras, LiDAR, radars) equipped on an autonomous vehicle to create a Bird's Eye View (BEV) representation is an essential and powerful component in planning and controlling systems. Recently, there has been a significant surge of interest in utilizing deep learning models for BEV semantic segmentation. However, being able to anticipate errors in segmentation and improve the explainability of DNNs is crucial to autonomous driving. In this paper, we evaluate various uncertainty quantification methods for BEV semantic segmentation based on two benchmark datasets (CARLA and nuScenes) with two representative backbones (Lift-Splat-Shoot and cross-view transformer). We perform an extensive evaluation of several uncertainty quantification methods. Among these methods, the evidential and postnet methods consistently demonstrate better performance in uncertainty quantification compared to MC dropout, ensemble, and deterministic baseline methods. Additionally, the ensemble method consistently exhibits the best performance in segmentation. We also propose augmenting uncertainty-aware BEV semantic segmentation models with supervised camera-view semantic segmentation features. Through extensive experiments, we consistently observe improvements in both the quality of BEV segmentation and the quality of uncertainty quantification. These findings suggest that exploring different types of supervision holds promise as a direction for enhancing uncertainty-aware BEV segmentation models.
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                <h2 style="font-size: 20px">Explaining Predictive Uncertainty by Looking Back at Model Explanations</h2>
-                <strong>Hanjie Chen, Wanyu Du, Yangfeng Ji</strong>
-                <a class="btn btn-red" href="assets/papers/16/CameraReady/ExpUnc_AAAI_Workshop.pdf">PDF</a> <br>
-                <u>Abstract</u>: Predictive uncertainty estimation of pre-trained language models is an important measure of how likely people can trust their predictions. However, little is known about what makes a model prediction uncertain. Explaining predictive uncertainty is an important complement to explaining prediction labels in helping users understand model decision making and gaining their trust on model predictions, while has been largely ignored in prior works. In this work, we propose to explain the predictive uncertainty of pre-trained language models by extracting uncertain words from existing model explanations. We find the uncertain words are those identified as making negative contributions to prediction labels, while actually explaining the predictive uncertainty. Experiments show that uncertainty explanations are indispensable to explaining models and helping humans understand model prediction behavior.
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <h2 style="font-size: 20px">SeedBERT: Recovering Annotator Rating Distributions from an Aggregated Label</h2>
-                <strong>Aneesha Sampath, Victoria Lin, Louis-Philippe Morency</strong>
-                <a class="btn btn-red" href="assets/papers/17/CameraReady/SeedBERT-Final.pdf">PDF</a> <br>
-                <u>Abstract</u>: Many machine learning tasks -- particularly those in affective computing -- are inherently subjective. When asked to classify facial expressions or to rate an individual's attractiveness, humans may disagree with one another, and no single answer may be objectively correct. However, machine learning datasets commonly have just one "ground truth" label for each sample, so models trained on these labels may not perform well on tasks that are subjective in nature. Though allowing models to learn from the individual annotators' ratings may help, most datasets do not provide annotator-specific labels for each sample. To address this issue, we propose SeedBERT, a method for recovering annotator rating distributions from a single label by inducing pre-trained models to attend to different portions of the input. Our human evaluations indicate that SeedBERT's attention mechanism is consistent with human sources of annotator disagreement. Moreover, in our empirical evaluations using large language models, SeedBERT demonstrates substantial gains in performance on downstream subjective tasks compared both to standard deep learning models and to other current models that account explicitly for annotator disagreement.
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <h2 style="font-size: 20px">Uncertainty-Aware Reward-based Deep Reinforcement Learning for Intent Analysis of Social Media Information</h2>
-                <strong>Zhen Guo, Qi Zhang, Xinwei An, Qisheng Zhang, Audun Jøsang, Lance Kaplan, Feng Chen, Dong Hyun Jeong, Jin-Hee Cho</strong>
-                <a class="btn btn-red" href="assets/papers/19/CameraReady/Zhen_AAAI23_Workshop.pdf">PDF</a> <br>
-                <u>Abstract</u>: Due to various and serious adverse impacts of spreading fake news, it is often known that only people with malicious intent would propagate fake news. However, it is not necessarily true based on social science studies. Distinguishing the types of fake news spreaders based on their intent is critical because it will effectively guide how to intervene to mitigate the spread of fake news with different approaches. To this end, we propose an intent classification framework that can best identify the correct intent of fake news. We will leverage deep reinforcement learning (DRL) that can optimize the structural representation of each tweet by removing noisy words from the input sequence when appending an actor to the long short-term memory (LSTM) intent classifier. Policy gradient DRL model (e.g., REINFORCE) can lead the actor to a higher delayed reward. We also devise a new uncertainty-aware immediate reward using a subjective opinion that can explicitly deal with multidimensional uncertainty for effective decision-making. Via 600K training episodes from the fake news tweets dataset with an annotated intent class, we evaluate the performance of uncertainty-aware reward in DRL. The results demonstrate that to maintain a high $95\%$ multi-class accuracy, our proposed models effectively and efficiently reduce the number of selected words.
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <h2 style="font-size: 20px">PPO-UE: Proximal Policy Optimization via Uncertainty-Aware Exploration</h2>
-                <strong>Qisheng Zhang, Zhen Guo, Audun Jøsang, Lance Kaplan, Feng Chen, Dong Hyun Jeong, Jin-Hee Cho</strong>
-                <a class="btn btn-red" href="assets/papers/21/CameraReady/Qisheng_AAAI23_Workshop.pdf">PDF</a> <br>
-                <u>Abstract</u>: Proximal Policy Optimization (PPO) is a highly popular policy-based deep reinforcement learning (DRL) approach. However, we observe that the homogeneous exploration process in PPO could cause an unexpected stability issue in the training phase. To address this issue, we propose PPO-UE, a PPO variant equipped with self-adaptive uncertainty-aware explorations (UEs) based on a ratio uncertainty level. The proposed PPO-UE is designed to improve convergence speed and performance with an optimized ratio uncertainty level. Through extensive sensitivity analysis by varying the ratio uncertainty level, our proposed PPO-UE considerably outperforms the baseline PPO in Roboschool continuous control tasks.
-            </td>
-        </tr>
-    </table> -->
+    
+    </table>
 
 
 
